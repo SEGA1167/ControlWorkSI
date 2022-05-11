@@ -1,4 +1,7 @@
-﻿void printArray(string[] arrayToPrint)
+﻿// Контрольная задача
+
+void printArray(string[] arrayToPrint)
+
 {
     Console.Write("[");
     for (int i = 0; i < arrayToPrint.Length; i++)
