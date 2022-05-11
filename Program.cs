@@ -9,23 +9,42 @@
     System.Console.WriteLine();
 }
 
-string[] originalArray = { "asvc", "1,3", "f4", "123rs" };
 
 
-int Sorted(string[] originalArray)
+
+string[] Sorted(string[] originalArray)
 {
     int count = 0;
+
     for (int i = 0; i < originalArray.Length; i++)
     {
-        if (i <= 3)
+        if (originalArray[i].Length <= 3)
         {
             count++;
         }
     }
-return count;
+
+    string[] newArray = new string[count];
+
+    int index = 0;
+
+    for (int i = 0; i < originalArray.Length; i++)
+    {
+        if (originalArray[i].Length <= 3)
+        {
+            newArray[index] = originalArray[i];
+            index++;
+        }
+
+    }
+    return newArray;
 }
+string[] originalArray = { "asvc", "123", "f4", "123rs" };
 
-string[] newArray = new string[count];
+printArray(originalArray);
 
+Console.WriteLine("");
 
+string[] newArray = Sorted(originalArray);
 
+printArray(newArray);
